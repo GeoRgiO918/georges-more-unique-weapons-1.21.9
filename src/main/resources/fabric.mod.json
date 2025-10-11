@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "georges-more-templates",
+	"version": "${version}",
+	"name": "George's More Templates",
+	"description": "Adds new smithing template!",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/georges-more-templates/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.george.moretemplates.GeorgesMoreTemplates"
+		],
+		"fabric-datagen": [
+			"com.george.moretemplates.GeorgesMoreTemplatesDataGenerator"
+		],
+		"client": [
+			"com.george.moretemplates.GeorgesMoreTemplatesClient"
+		]
+	},
+	"mixins": [
+		"georges-more-templates.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.17.3",
+		"minecraft": "~1.21.9",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
