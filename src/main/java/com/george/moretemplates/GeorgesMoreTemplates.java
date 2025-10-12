@@ -1,5 +1,6 @@
 package com.george.moretemplates;
 
+import com.george.moretemplates.item.MoreTemplatesItems;
 import net.fabricmc.api.ModInitializer;
 
 import org.slf4j.Logger;
@@ -14,5 +15,8 @@ public class GeorgesMoreTemplates implements ModInitializer {
 	public void onInitialize() {
 
 		LOGGER.info("Hello Fabric world!");
+		MoreTemplatesItems.registerSmithingTemplates();
+		MoreTemplatesEntities.registerEntities();
+
 	}
 }
