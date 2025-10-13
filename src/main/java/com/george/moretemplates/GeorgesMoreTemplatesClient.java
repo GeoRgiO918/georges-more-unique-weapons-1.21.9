@@ -15,5 +15,8 @@ public class GeorgesMoreTemplatesClient implements ClientModInitializer {
                 FlyingItemEntityRenderer::new
         );
 
+
+
+
     }
 }
