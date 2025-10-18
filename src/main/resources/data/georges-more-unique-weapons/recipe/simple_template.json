@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:smithing_transform",
+  "template": "georges-more-unique-weapons:simple_template",
+  "base": "#minecraft:swords",
+  "addition": "georges-more-unique-weapons:gravity_ingot",
+  "result": "georges-more-unique-weapons:simple_sword"
+}

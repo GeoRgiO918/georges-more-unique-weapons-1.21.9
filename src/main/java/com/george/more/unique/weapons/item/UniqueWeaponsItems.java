@@ -1,6 +1,7 @@
 package com.george.more.unique.weapons.item;
 
 import com.george.more.unique.weapons.GeorgesMoreUniqueWeapons;
+import com.george.more.unique.weapons.item.providers.BaseItemProvider;
 import com.george.more.unique.weapons.item.providers.GravityOrbProvider;
 import com.george.more.unique.weapons.item.providers.SimpleSwordProvider;
 import com.george.more.unique.weapons.item.providers.SimpleTemplateProvider;
@@ -16,6 +17,7 @@ public class UniqueWeaponsItems {
     public final static Item SIMPLE_TEMPLATE = registerItem(SimpleTemplateProvider.NAME, SimpleTemplateProvider.getItem());
     public final static Item SIMPLE_SWORD = registerItem(SimpleSwordProvider.NAME,SimpleSwordProvider.getItem());
     public final static Item GRAVITY_ORB = registerItem(GravityOrbProvider.NAME, GravityOrbProvider.getItem());
+    public final static Item GRAVITY_INGOT = registerItem("gravity_ingot", BaseItemProvider.getItem("gravity_ingot"));
 
 
     public static void registerSmithingTemplates(){
@@ -25,7 +27,7 @@ public class UniqueWeaponsItems {
             fabricItemGroupEntries.add(SIMPLE_TEMPLATE);
         });
 
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register(fabricItemGroupEntries ->
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(fabricItemGroupEntries ->
         {
             fabricItemGroupEntries.add(SIMPLE_SWORD);
         });
@@ -34,6 +36,12 @@ public class UniqueWeaponsItems {
         {
             fabricItemGroupEntries.add(GRAVITY_ORB);
         });
+
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(fabricItemGroupEntries ->
+        {
+            fabricItemGroupEntries.add(GRAVITY_INGOT);
+        });
+
 
 
     }

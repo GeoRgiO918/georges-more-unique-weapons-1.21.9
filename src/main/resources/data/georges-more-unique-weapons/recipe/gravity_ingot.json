@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#nE",
+    "nFn",
+    "En#"
+  ],
+  "key": {
+    "#": "minecraft:popped_chorus_fruit",
+    "n": "minecraft:netherite_ingot",
+    "E": "minecraft:echo_shard",
+    "F": "georges-more-unique-weapons:gravity_orb"
+  },
+  "result": {
+    "id": "georges-more-unique-weapons:gravity_ingot",
+    "count": 1
+  }
+}
