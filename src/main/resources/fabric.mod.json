@@ -1,9 +1,9 @@
 {
 	"schemaVersion": 1,
-	"id": "georges-more-templates",
+	"id": "georges-more-unique-weapons",
 	"version": "${version}",
-	"name": "George's More Templates",
-	"description": "Adds new smithing template!",
+	"name": "George's More unique weapons",
+	"description": "Adds new weapons!",
 	"authors": [
 		"Me!"
 	],
@@ -12,21 +12,21 @@
 		"sources": "https://github.com/FabricMC/fabric-example-mod"
 	},
 	"license": "MIT",
-	"icon": "assets/georges-more-templates/icon.png",
+	"icon": "assets/georges-more-unique-weapons/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"com.george.moretemplates.GeorgesMoreTemplates"
+			"com.george.more.unique.weapons.GeorgesMoreUniqueWeapons"
 		],
 		"fabric-datagen": [
-			"com.george.moretemplates.GeorgesMoreTemplatesDataGenerator"
+			"com.george.more.unique.weapons.GeorgesMoreUniqueWeaponsDataGenerator"
 		],
 		"client": [
-			"com.george.moretemplates.GeorgesMoreTemplatesClient"
+			"com.george.more.unique.weapons.GeorgesMoreUniqueWeaponsClient"
 		]
 	},
 	"mixins": [
-		"georges-more-templates.mixins.json"
+		"georges-more-unique-weapons.mixins.json"
 	],
 	"depends": {
 		"fabricloader": ">=0.17.3",

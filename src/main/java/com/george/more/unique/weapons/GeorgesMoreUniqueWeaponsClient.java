@@ -1,17 +1,17 @@
-package com.george.moretemplates;
+package com.george.more.unique.weapons;
 
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.minecraft.client.render.entity.FlyingItemEntityRenderer;
 
-public class GeorgesMoreTemplatesClient implements ClientModInitializer {
+public class GeorgesMoreUniqueWeaponsClient implements ClientModInitializer {
 
 
     @Override
     public void onInitializeClient() {
 
         EntityRendererRegistry.register(
-                MoreTemplatesEntities.GRAVITY_ORB,
+                UniqueWeaponsEntities.GRAVITY_ORB,
                 FlyingItemEntityRenderer::new
         );
 

@@ -1,7 +1,0 @@
-{
-  "type": "minecraft:smithing_transform",
-  "template": "georges-more-templates:simple_template",
-  "base": "#minecraft:swords",
-  "addition": "georges-more-templates:gravity_orb",
-  "result": "georges-more-templates:simple_sword"
-}

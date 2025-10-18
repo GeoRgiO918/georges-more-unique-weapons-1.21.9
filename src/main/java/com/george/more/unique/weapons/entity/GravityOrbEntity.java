@@ -1,13 +1,11 @@
-package com.george.moretemplates.entity;
+package com.george.more.unique.weapons.entity;
 
-import com.george.moretemplates.GeorgesMoreTemplates;
-import com.george.moretemplates.MoreTemplatesEntities;
-import com.george.moretemplates.item.MoreTemplatesItems;
+import com.george.more.unique.weapons.UniqueWeaponsEntities;
+import com.george.more.unique.weapons.item.UniqueWeaponsItems;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
-import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.projectile.thrown.ThrownItemEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -30,18 +28,18 @@ public class GravityOrbEntity extends ThrownItemEntity {
     }
 
     public GravityOrbEntity(World world, LivingEntity owner, ItemStack stack) {
-        super(MoreTemplatesEntities.GRAVITY_ORB, owner, world, stack);
+        super(UniqueWeaponsEntities.GRAVITY_ORB, owner, world, stack);
     }
 
     public GravityOrbEntity(World world, double x, double y, double z, ItemStack stack) {
-        super(MoreTemplatesEntities.GRAVITY_ORB, x, y, z, world, stack);
+        super(UniqueWeaponsEntities.GRAVITY_ORB, x, y, z, world, stack);
     }
 
 
 
     @Override
     protected Item getDefaultItem() {
-        return MoreTemplatesItems.GRAVITY_ORB;
+        return UniqueWeaponsItems.GRAVITY_ORB;
     }
 
     @Override

@@ -1,6 +1,6 @@
-package com.george.moretemplates.item.throwable;
+package com.george.more.unique.weapons.item.throwable;
 
-import com.george.moretemplates.entity.GravityOrbEntity;
+import com.george.more.unique.weapons.entity.GravityOrbEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.projectile.ProjectileEntity;
 import net.minecraft.item.Item;
