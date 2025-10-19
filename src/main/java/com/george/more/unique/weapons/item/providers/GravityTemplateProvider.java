@@ -11,15 +11,15 @@ import net.minecraft.util.Rarity;
 
 import java.util.List;
 
-public class SimpleTemplateProvider {
+public class GravityTemplateProvider {
 
-    public static final String NAME = "simple_template";
-    public static final String APPLIES_TO_KEY = "item.georges-more-unique-weapons.simple_template.applies_to";
-    public static final String INGREDIENTS_KEY = "item.georges-more-unique-weapons.simple_template.ingredients";
-    public static final String BASE_SLOT_DESCRIPTION = "item.georges-more-unique-weapons.simple_template.base_slot_description";
-    public static final String UPGRADE_KEY = "upgrade.georges-more-unique-weapons.simple_template";
-    public static final List<Identifier> BASE_SLOT_ICON = List.of(Identifier.of("item/empty_slot_sword"));
-    public static final List<Identifier> ADDITIONS_SLOT_ICON = List.of(Identifier.of("item/empty_slot_ingot"));
+    public static final String NAME = "gravity_template";
+    public static final String APPLIES_TO_KEY = "item.georges-more-unique-weapons.gravity_template.applies_to";
+    public static final String INGREDIENTS_KEY = "item.georges-more-unique-weapons.gravity_template.ingredients";
+    public static final String BASE_SLOT_DESCRIPTION = "item.georges-more-unique-weapons.gravity_template.base_slot_description";
+    public static final String UPGRADE_KEY = "upgrade.georges-more-unique-weapons.gravity_template";
+    public static final List<Identifier> BASE_SLOT_ICON = List.of(Identifier.of("minecraft:container/slot/sword"));
+    public static final List<Identifier> ADDITIONS_SLOT_ICON = List.of(Identifier.of("minecraft:container/slot/ingot"));
 
 
     public static SmithingTemplateItem getItem() {

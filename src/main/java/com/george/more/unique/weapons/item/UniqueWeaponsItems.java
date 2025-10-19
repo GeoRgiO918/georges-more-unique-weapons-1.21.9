@@ -3,8 +3,8 @@ package com.george.more.unique.weapons.item;
 import com.george.more.unique.weapons.GeorgesMoreUniqueWeapons;
 import com.george.more.unique.weapons.item.providers.BaseItemProvider;
 import com.george.more.unique.weapons.item.providers.GravityOrbProvider;
-import com.george.more.unique.weapons.item.providers.SimpleSwordProvider;
-import com.george.more.unique.weapons.item.providers.SimpleTemplateProvider;
+import com.george.more.unique.weapons.item.providers.GravitySwordProvider;
+import com.george.more.unique.weapons.item.providers.GravityTemplateProvider;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
@@ -14,8 +14,8 @@ import net.minecraft.util.Identifier;
 
 public class UniqueWeaponsItems {
 
-    public final static Item SIMPLE_TEMPLATE = registerItem(SimpleTemplateProvider.NAME, SimpleTemplateProvider.getItem());
-    public final static Item SIMPLE_SWORD = registerItem(SimpleSwordProvider.NAME,SimpleSwordProvider.getItem());
+    public final static Item GRAVITY_TEMPLATE = registerItem(GravityTemplateProvider.NAME, GravityTemplateProvider.getItem());
+    public final static Item GRAVITY_SWORD = registerItem(GravitySwordProvider.NAME, GravitySwordProvider.getItem());
     public final static Item GRAVITY_ORB = registerItem(GravityOrbProvider.NAME, GravityOrbProvider.getItem());
     public final static Item GRAVITY_INGOT = registerItem("gravity_ingot", BaseItemProvider.getItem("gravity_ingot"));
 
@@ -24,12 +24,12 @@ public class UniqueWeaponsItems {
         GeorgesMoreUniqueWeapons.LOGGER.info("Registring smithing templates");
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(fabricItemGroupEntries ->
         {
-            fabricItemGroupEntries.add(SIMPLE_TEMPLATE);
+            fabricItemGroupEntries.add(GRAVITY_TEMPLATE);
         });
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(fabricItemGroupEntries ->
         {
-            fabricItemGroupEntries.add(SIMPLE_SWORD);
+            fabricItemGroupEntries.add(GRAVITY_SWORD);
         });
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(fabricItemGroupEntries ->

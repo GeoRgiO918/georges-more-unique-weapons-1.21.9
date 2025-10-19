@@ -1,6 +1,7 @@
 package com.george.more.unique.weapons;
 
 import com.george.more.unique.weapons.item.UniqueWeaponsItems;
+import com.george.more.unique.weapons.loottable.UniqueWeaponsLootTableModifiers;
 import net.fabricmc.api.ModInitializer;
 
 import org.slf4j.Logger;
@@ -17,6 +18,7 @@ public class GeorgesMoreUniqueWeapons implements ModInitializer {
 		LOGGER.info("Hello Fabric world!");
 		UniqueWeaponsItems.registerSmithingTemplates();
 		UniqueWeaponsEntities.registerEntities();
+		UniqueWeaponsLootTableModifiers.modifyLootTable();
 
 	}
 }

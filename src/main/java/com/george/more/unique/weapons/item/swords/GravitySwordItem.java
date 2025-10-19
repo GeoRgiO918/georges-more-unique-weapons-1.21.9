@@ -14,8 +14,8 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
 
-public class SimpleSwordItem  extends Item {
-    public SimpleSwordItem(Settings settings) {
+public class GravitySwordItem extends Item {
+    public GravitySwordItem(Settings settings) {
         super(settings);
     }
 

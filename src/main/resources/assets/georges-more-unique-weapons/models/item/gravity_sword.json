@@ -1,7 +1,7 @@
 {
   "parent": "item/handheld",
   "textures": {
-    "layer0": "georges-more-unique-weapons:item/simple_sword"
+    "layer0": "georges-more-unique-weapons:item/gravity_sword"
   },
   "display": {
     "thirdperson_righthand": {
