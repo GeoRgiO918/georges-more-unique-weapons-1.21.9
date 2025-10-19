@@ -11,6 +11,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.particle.ParticleEffect;
 import net.minecraft.particle.ParticleTypes;
+import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
@@ -52,18 +53,25 @@ public class GravityOrbEntity extends ThrownItemEntity {
 
             // Визуальный эффект
             world.spawnParticles(ParticleTypes.PORTAL, pos.x, pos.y, pos.z, 50, 1.0, 1.0, 1.0, 0.1);
-            world.playSound(null, pos.x, pos.y, pos.z, SoundEvents.ENTITY_ENDERMAN_TELEPORT, SoundCategory.PLAYERS, 1.0F, 1.0F);
+            world.spawnParticles(ParticleTypes.ELECTRIC_SPARK, pos.x, pos.y, pos.z, 100, 10.0, 1.0, 10.0, 0.2);
+            world.spawnParticles(ParticleTypes.ELECTRIC_SPARK, pos.x, pos.y, pos.z, 100, 3.0, 3.0, 3.0, 0.4);
+            world.playSound(null, pos.x, pos.y, pos.z, SoundEvents.BLOCK_END_PORTAL_SPAWN, SoundCategory.PLAYERS, 1.0F, 1.0F);
 
             // Радиус воздействия
             double radius = 10.0D;
             List<LivingEntity> nearby = world.getEntitiesByClass(LivingEntity.class, new Box(
                     pos.x - radius, pos.y - radius, pos.z - radius,
                     pos.x + radius, pos.y + radius, pos.z + radius
-            ), e -> e.isAlive() && e != this.getOwner());
+            ), LivingEntity::isMobOrPlayer);
 
             for (LivingEntity entity : nearby) {
                 // Подброс
-                entity.addVelocity(0.0, 1.2, 0.0);
+                if (entity instanceof ServerPlayerEntity player) {
+                    player.setVelocity(player.getVelocity().add(0.0, 1.2, 0.0));
+                    player.velocityModified = true; // 👈 ключевой момент!
+                } else {
+                    entity.addVelocity(0.0, 1.2, 0.0);
+                }
                 // Эффект левитации
                 entity.addStatusEffect(new StatusEffectInstance(StatusEffects.LEVITATION, 40, 1));
             }
